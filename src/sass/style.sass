@@ -1,6 +1,19 @@
 *
 	font-family: 'Roboto', sans-serif
 
+$black: #222222
+$white: #ffffff
+$blue: #409db4
+
+@mixin label-component($bgColor,$color)
+	display: block
+	padding: 10px
+	background-color: $bgColor
+	color: $color
+	font-size: 11px
+	margin: 71px auto
+	width: 10%
+
 header
 	position: relative
 	height: 50px
@@ -135,13 +148,7 @@ nav
 	text-align: center
 
 .label
-	display: block
-	background-color: #212121
-	color: white
-	padding: 10px
-	font-size: 11px
-	margin: 71px auto
-	width: 10%
+	@include label-component($black,$white)
 
 .title
 	margin-top: 27px
@@ -230,4 +237,22 @@ nav
 			padding: 6px
 			cursor: pointer
 
+.choice
+	min-height: 892px
+	padding: 54px 0 138px 0
+	background: linear-gradient(to bottom, $black 70%, $white 30%)
+	.label
+		@include label-component($white,$black)
+	.title
+		color: $white
+	.subtitle
+		color: $white
+	&_img
+		display: block
+		margin: 0 auto
+		margin-top: 56px
 
+	&_descr
+		width: 294px
+		margin: 0 auto
+		text-align: center
