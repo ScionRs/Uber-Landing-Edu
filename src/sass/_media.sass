@@ -16,6 +16,10 @@
       width: 300px
 
 @media (max-width: 991px)
+  .label
+    width: 25%
+  .choice .label
+    width: 25%
   .menu
     &_item
       padding-right: 8px
@@ -40,12 +44,31 @@
       font-size: 30px
 
   .reasons
+    margin-bottom: 50px
     &_card
       flex-direction: column
       align-items: center
     &_text
       width: 300px
       margin-top: 20px
+
+  .mobile_item
+    width: 520px
+    height: 420px
+
+  .footer
+    &_wrapper
+      justify-content: center
+      align-items: center
+      flex-direction: column
+    &_social
+      width: auto
+      justify-content: center
+      margin-bottom: 25px
+    &_links
+      margin-bottom: 25px
+
+
 
 @media (max-width: 767px)
   .menu
@@ -95,6 +118,24 @@
             display: none
           &:nth-child(3)
             transform: translateY(3px) rotate(45deg)
+
+  .xs-hidden
+    display: none
+  .xs-visible
+    display: block
+  .subheader
+    &_phone
+      display: block
+      color: $white
+      font-size: 12px
+      font-weight: 400
+      text-transform: uppercase
+
+    &_btn
+      display: block
+      width: 200px
+      height: 40px
+      margin: 0 auto
 
 
 
